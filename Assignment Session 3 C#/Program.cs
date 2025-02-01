@@ -24,7 +24,6 @@ namespace Assignment_Session_3_C_
 
             //Assign User Define Delegate for a variable to GetAuthors of the Book
             Console.Write("Book Aurthors : ");
-
             FunctionsDelegate functionsDelegateAuthors = BookFunctions.GetAuthors;
             LibraryEngine.ProcessBooks(book, functionsDelegateAuthors); //Book Aurthors : Ahmed, Mohamed, Mahmoud
 
@@ -42,26 +41,22 @@ namespace Assignment_Session_3_C_
             Func<Book, string> TitleFunc = BookFunctions.GetTitle;
             LibraryEngine.ProcessBooks(book, TitleFunc); // Book Title : The NoteBook
 
-
             //Assign a BCL Delegate for a variable to GetAuthors of the Book
             Console.Write("Book Aurthors : ");
             Func<Book, string> AuthorsFunc = BookFunctions.GetAuthors;
             LibraryEngine.ProcessBooks(book, AuthorsFunc); //Book Aurthors : Ahmed, Mohamed, Mahmoud
-
 
             //Assign a BCL Delegate for a variable to GetPrice of the Book
             Console.Write("Book Price : ");
             Func<Book, string> PriceFunc = BookFunctions.GetPrice;
             LibraryEngine.ProcessBooks(book, PriceFunc); //Book Price: $300.00
 
-
             #endregion
-
 
             #region c. Anonymous Method (GetISBN)
 
             //Assign a BCL Delegate for a variable to Anonymous Method (GetISBN) of the Book
-            //Console.Write("Book ISBN : ");
+            Console.Write("Book ISBN : ");
             Func<Book, string> GetISBN = delegate (Book B) { return B?.ISBN ?? ""; };
             LibraryEngine.ProcessBooks(book, GetISBN); //123 - 456 - 789
 
@@ -70,7 +65,7 @@ namespace Assignment_Session_3_C_
             #region d. Lambda Expression (GetPublicationDate)
 
             //Assign a BCL Delegate for a variable to  Lambda Expression (GetPublicationDate) of the Book
-            //Console.Write("Book PublicationDate : ");
+            Console.Write("Book PublicationDate : ");
             Func<Book, string> GetPublicationDate = B => B.PublicationDate.ToString("yyyy-MM-dd");
             LibraryEngine.ProcessBooks(book, GetPublicationDate); //0001 - 01 - 01
 
