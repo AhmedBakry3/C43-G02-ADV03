@@ -7,14 +7,15 @@ namespace Assignment_Session_3_C_
     {
         static void Main(string[] args)
         {
-            #region a. User Defined Delegate Datatype
-            //An array of Authors
+            //Create an array of Authors
             string[] Authors = { "Ahmed", "Mohamed", "Mahmoud" };
 
-            //Make a list of Book
+            //Create a list of Book
             List<Book> book = new List<Book>() {
                new Book("123-456-789", "The NoteBook", Authors , new DateTime(), 300)
             };
+            
+            #region a. User Defined Delegate Datatype
 
             //Assign User Define Delegate for a variable to GetTtitle of the Book
             Console.Write("Book Title : ");
