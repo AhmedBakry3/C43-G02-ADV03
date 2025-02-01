@@ -22,7 +22,14 @@ namespace Assignment_Session_3_C_.Question_1
 
         //GetAuthors Method
         public static string GetAuthors(Book B) {
-            return string.Join(", ", B?.Authors );
+        if(B.Authors is not null) 
+        {
+          return string.Join(", ", B.Authors);
+        }
+        else 
+        { 
+            return null;
+        }        
         }
 
         //GetPrice Method
